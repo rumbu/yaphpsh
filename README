@@ -1,1 +1,10 @@
-This file was created by JetBrains PhpStorm 4.0.3 for binding GitHub repository
+Yet Another PHP Shell - tiny and smart!
+
+To generate new password, type in console:
+
+$ php -r "echo hash('sha256','myPassword');"
+
+Open yaphpsh.php, copy result of this command to string with
+$password = 'PASTE HERE';
+
+Done!
