@@ -16,4 +16,5 @@ Features:
 * Not use any external libraries except clear php and javascript.
 * Do not reloads a page.
 * Handles path changes made by 'cd'.
+* Supports command history (beta).
 * One file with size just 6,21 KB!
