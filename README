@@ -8,3 +8,12 @@ Open yaphpsh.php, copy result of this command to string with
 $password = 'PASTE HERE';
 
 Done!
+
+Features:
+* SHA-256 hashing.
+* Generates a salt for every command; it expires after 15 seconds.
+* Not use session or cookies.
+* Not use any external libraries except clear php and javascript.
+* Do not reloads a page.
+* Handles path changes made by 'cd'.
+* One file with size just 6,21 KB!
