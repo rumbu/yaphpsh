@@ -11,10 +11,11 @@ Done!
 
 Features:
 * SHA-256 hashing.
-* Generates a salt for every command; it expires after 15 seconds.
-* Not use session or cookies.
-* Not use any external libraries except clear php and javascript.
-* Do not reloads a page.
+* AES 256 encryption for untrusted channels.
+* Generates a salt for every command; it expires after 5 seconds.
+* No session or cookies.
+* Not require any external libraries except clear php and javascript.
+* No page reloads.
 * Handles path changes made by 'cd'.
 * Supports command history (beta).
 * One file with size just 6,21 KB!
