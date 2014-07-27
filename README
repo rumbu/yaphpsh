@@ -4,7 +4,7 @@ To generate new password, type in console:
 
 $ php -r "echo hash('sha256','myPassword');"
 
-Open yaphpsh.php, copy result of this command to string with
+Open yaphpsh.php, paste result of this command to set a password
 $password = 'PASTE HERE';
 
 Done!
@@ -12,10 +12,12 @@ Done!
 Features:
 * SHA-256 hashing.
 * AES 256 encryption for untrusted channels.
-* Generates a salt for every command; it expires after 5 seconds.
+* Generates a salt for every command; it expires after 10 seconds.
+* Avoids to send password or its hash.
 * No session or cookies.
 * Not require any external libraries except clear php and javascript.
 * No page reloads.
+* Magic command 'download PATH' to download zipped folder from server
 * Handles path changes made by 'cd'.
-* Supports command history.
+* Supports commands history.
 * All in one small file!
